@@ -1,0 +1,48 @@
+<header>
+
+</header>
+
+<body>
+<div class="main">
+  <input type="checkbox" id="chk" aria-hidden="true">
+
+  <div class="signup">
+    <form id="form_s">
+      <label for="chk" aria-hidden="true">Sign up</label>
+      <input type="text" id="user_s" name="user_s" placeholder="User name" required>
+      <input type="email" id="email_s" name="email_s" placeholder="Email" required>
+      <input type="password" id="pass_s" name="pass_s" placeholder="Password" required>
+      <input type="password" id="passconfirm_s" name="passconfirm_s" placeholder="Password Confirmation" required>
+      <button class="button" type="submit">Sign up</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    function validarPasswords(){
+      var pass = document.getElementById("pass_s").value;
+      var repass = document.getElementById("passconfirm_s").value;
+
+      if (pass!==repass)
+      {
+        alert("Las Contraseñas no Coinsiden");
+      }
+      else
+      {
+        document.getElementById("form_s").submit();
+      }
+    }
+  </script>
+
+  <div class="login">
+    <form class="align-items-center">
+      <label for="chk" aria-hidden="true">Login</label>
+      <input type="email" name="email" placeholder="Email" required="">
+      <input type="password" name="password" placeholder="Password" required="">
+      <a id="recovery-link" class="text align-content-center" href="/recovery">Forgot Password?</a>
+      <button>Login</button>
+    </form>
+  </div>
+</div>
+</body>
+
+
