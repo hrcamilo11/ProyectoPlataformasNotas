@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+
 }
 
 a{
@@ -12,22 +13,22 @@ a{
 }
 
 body{
-  padding: 30px;
-  height: 100vh;
+  margin:30px 0;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f0f0f0;
 }
 
 .container{
+  margin: 50px auto;
   position: relative;
   width: 460px;
   height: 640px;
   border-radius: 12px;
   padding: 20px 30px 120px;
   background: #303f9f;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 5px 10px #000000;
   overflow: hidden;
 }
 
@@ -167,4 +168,12 @@ form .btn{
 
 .container.active .signup-section header{
   opacity: 0.6;
+}
+
+.login-form{
+  display: flex;
+}
+
+.signup-form{
+  display: flex;
 }
