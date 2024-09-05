@@ -1,11 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {RouterOutlet} from "@angular/router";
+import {RouterLink, RouterOutlet} from "@angular/router";
 import {CargarScriptsService} from "../cargar-scripts.service";
 
 @Component({
   selector    : 'app-login',
   standalone  : true,
-  imports: [] ,
+  imports: [
+    RouterLink
+  ],
   templateUrl : './login.component.html',
   styleUrl    : './login.component.css'
 
