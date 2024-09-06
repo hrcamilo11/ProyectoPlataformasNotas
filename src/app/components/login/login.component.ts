@@ -19,6 +19,7 @@ export class LoginComponent{
     _CargarScript.Carga(['login/login']);
 
   }
+  passwordError: string | null = null;
 
   onLogin(email: string, password: string): void {
     const storedUsers = JSON.parse(<string>localStorage.getItem('users')) || [];
@@ -38,10 +39,19 @@ export class LoginComponent{
 
     if (existingUser) {
       alert('El usuario ya está registrado.');
+    } else if (!this.validatePassword(password)) {
+      this.passwordError = 'La contraseña debe tener al menos 8 caracteres, incluyendo letras mayúsculas, minúsculas, números y caracteres especiales.';
     } else {
       storedUsers.push({ fullName, email, password });
       localStorage.setItem('users', JSON.stringify(storedUsers));
       alert('Registro exitoso. Ahora puedes iniciar sesión.');
+      this.passwordError = null; // Limpia el mensaje de error
     }
+  }
+
+  validatePassword(password: string): boolean {
+    // Expresión regular para validar la contraseña
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return passwordRegex.test(password);
   }
 }

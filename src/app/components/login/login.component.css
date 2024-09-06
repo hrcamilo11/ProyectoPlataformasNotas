@@ -20,28 +20,28 @@ body{
 }
 
 .container{
-  margin: 50px auto;
   position: relative;
   width: 460px;
-  height: 640px;
-  border-radius: 12px;
+  height: calc(100% + 15px);
+  border-radius: 14px;
   padding: 20px 30px 120px;
   background: #303f9f;
   box-shadow: 2px 5px 10px #000000;
   overflow: hidden;
+
 }
 
 .login-section{
   position: absolute;
   left: 50%;
-  bottom: -88%;
+  bottom: -87%;
   transform: translateX(-50%);
   width: calc(100% + 180px);
-  padding: 20px 140px;
+  padding: 10px 140px;
   background: #fff;
-  border-radius: 290px;
+  border-radius: 220px;
   height: 100%;
-  transition: all 0.6s ease;
+  transition: all 0.9s ease-in;
 }
 
 .login-section header,
@@ -51,7 +51,9 @@ body{
   color: #fff;
   font-weight: 600;
   cursor: pointer;
+
 }
+
 
 .login-section header{
   color: #333;
@@ -77,6 +79,10 @@ body{
   justify-content: center;
   gap: 6px;
   cursor: pointer;
+}
+
+.social-buttons button:hover{
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .login-section .social-buttons button{
@@ -175,4 +181,17 @@ form .btn{
 
 .signup-form{
   display: flex;
+}
+
+.btn-singup{
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2px;
+  cursor: pointer;
 }
