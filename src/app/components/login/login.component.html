@@ -22,10 +22,11 @@
       <div class="line"></div>
     </div>
 
-    <form class="singup-form">
-      <input type="text" placeholder="Full name" required>
-      <input type="email" placeholder="Email address" required>
-      <input type="password" placeholder="Password" required>
+
+    <form class="singup-form" (submit)="onSignup(fullName.value, email.value, password.value)">
+      <input type="text" #fullName placeholder="Full name" required>
+      <input type="email" #email placeholder="Email address" required>
+      <input type="password" #password placeholder="Password" required>
       <a routerLink="/recovery">Forget Password?</a>
       <button type="submit" class="btn">Signup</button>
     </form>
@@ -46,9 +47,9 @@
       <div class="line"></div>
     </div>
 
-    <form class="login-form">
-      <input type="email" placeholder="Email address" required>
-      <input type="password" placeholder="Password" required>
+    <form class="login-form" (submit)="onLogin(email.value, password.value)">
+      <input type="email" #email placeholder="Email address" required>
+      <input type="password" #password placeholder="Password" required>
       <a routerLink="/recovery">Forget Password?</a>
       <button type="submit" class="btn">Login</button>
     </form>

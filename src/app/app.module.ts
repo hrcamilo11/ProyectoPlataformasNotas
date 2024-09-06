@@ -1,14 +1,30 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 //Servicios
-import { CargarScriptsService } from "./cargar-scripts.service";
+import { CargarScriptsService } from "./services/cargar-scripts.service";
+
+//Modulos
+import { CommonModule } from '@angular/common';
+import {BrowserModule} from "@angular/platform-browser";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+
+//Componentes
+import {DocumentListComponent} from "./components/document-list/document-list.component";
+import {AppComponent} from "./app.component";
+
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    AppComponent
   ],
   providers:[
     CargarScriptsService

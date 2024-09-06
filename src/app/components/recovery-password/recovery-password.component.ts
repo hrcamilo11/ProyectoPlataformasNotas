@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {CargarScriptsService} from "../cargar-scripts.service";
+import {CargarScriptsService} from "../../services/cargar-scripts.service";
 import {RouterLink} from "@angular/router";
 
 @Component({
