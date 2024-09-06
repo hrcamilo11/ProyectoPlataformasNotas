@@ -1,7 +1,7 @@
 # Plataforma de Apuntes Universitarios
 
 ## Descripción General
-Esta es una plataforma en línea dedicada a la compartición y acceso de apuntes universitarios de alta calidad. Los estudiantes pueden subir, descargar y colaborar en la mejora de apuntes en diversas materias. La plataforma cuenta con un sistema de búsqueda avanzada, revisiones de calidad y recompensas para los contribuyentes.
+Esta es una plataforma en línea dedicada a brindar acceso de apuntes universitarios de alta calidad. Los estudiantes pueden subir, descargar y colaborar en la mejora de apuntes en diversas materias. La plataforma cuenta con un sistema de búsqueda avanzada, revisiones de calidad y una comunidad que contrinuye a su crecimiento.
 
 ## Objetivo General
 Proveer a los estudiantes universitarios de una herramienta eficaz y confiable para acceder a apuntes y recursos educativos, fomentando una comunidad colaborativa y asegurando la compensación justa para los creadores de contenido.
