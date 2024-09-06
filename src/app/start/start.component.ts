@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import {CargarScriptsService} from "../cargar-scripts.service";
 import {NgOptimizedImage} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-start',
   standalone: true,
   imports: [
-    NgOptimizedImage
+    NgOptimizedImage,
+    RouterLink
   ],
   templateUrl: './start.component.html',
   styleUrl: './start.component.css'

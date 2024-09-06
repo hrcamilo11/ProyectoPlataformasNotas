@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 body{
@@ -14,32 +15,39 @@ body{
   bottom: 0;
   left: 0;
   height: 100%;
-  z-index: -1;
+  z-index: -2;
 }
 
 .container{
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap :7rem;
-  padding: 0 2rem;
-}
-
-.img{
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+
 }
 
-.login-content{
+.rigth{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.rigth h2{
+  text-align: center;
+  font-size: 35px;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.content{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
 }
 
-.img img{
+.left img{
   width: 500px;
 }
 
@@ -47,18 +55,18 @@ form{
   width: 360px;
 }
 
-.login-content img{
+.content img{
   height: 100px;
 }
 
-.login-content h2{
+.content h2{
   margin: 15px 0;
   color: #333;
   text-transform: uppercase;
   font-size: 2.9rem;
 }
 
-.login-content .input-div{
+.content .input-div{
   position: relative;
   display: grid;
   grid-template-columns: 7% 93%;
@@ -67,7 +75,7 @@ form{
   border-bottom: 2px solid #d9d9d9;
 }
 
-.login-content .input-div.one{
+.content .input-div.one{
   margin-top: 0;
 }
 
@@ -183,56 +191,92 @@ a:hover{
 
 
 @media screen and (max-width: 1050px){
-  .container{
-    grid-gap: 5rem;
+
+
+
+  .content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
   }
 }
 
 @media screen and (max-width: 1000px){
+
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .rigth{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+  }
+
   form{
     width: 290px;
   }
 
-  .login-content h2{
+  .content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+  }
+
+  .content h2{
     font-size: 2.4rem;
     margin: 8px 0;
   }
 
-  .img img{
+  .left img{
     width: 400px;
   }
 }
 
 @media screen and (max-width: 900px){
+
   .container{
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
   }
 
-  .img{
-    display: none;
-  }
+  .rigth{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
-  .wave{
-    display: none;
   }
-
-  .login-content{
+  .content{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    gap:50px;
-
-    div{
-      margin: 50px;
-      text-align: start;
-
-
-    }
-
-    button{
-      margin: 50px;
-    }
-
+    gap: 5rem;
   }
+
+  .container{
+    grid-template-columns: 1fr;
+  }
+
+  .left{
+    display: none;
+  }
+
+  .wave{
+    width: auto;
+  }
+
+
 }
