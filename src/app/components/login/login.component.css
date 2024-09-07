@@ -22,7 +22,7 @@ body{
 .container{
   position: relative;
   width: 460px;
-  height: calc(100% + 15px);
+  height: 650px;
   border-radius: 14px;
   padding: 20px 30px 120px;
   background: #303f9f;
@@ -36,10 +36,10 @@ body{
   left: 50%;
   bottom: -87%;
   transform: translateX(-50%);
-  width: calc(100% + 180px);
+  width: calc(100% + 170px);
   padding: 10px 140px;
   background: #fff;
-  border-radius: 220px;
+  border-radius: 150px;
   height: 100%;
   transition: all 0.9s ease-in;
 }
@@ -51,6 +51,10 @@ body{
   color: #fff;
   font-weight: 600;
   cursor: pointer;
+
+  h3:hover{
+    text-shadow: #000000 0.4px 0.4px 0.4px;
+  }
 
 }
 
@@ -183,8 +187,8 @@ form .btn{
   display: flex;
 }
 
-.btn-singup{
-  margin: 0;
+.btn-singup,
+.btn-login{
   width: 100%;
   border: none;
   border-radius: 10px;
@@ -194,4 +198,5 @@ form .btn{
   justify-content: start;
   gap: 2px;
   cursor: pointer;
+
 }

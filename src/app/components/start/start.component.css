@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 
 body{
@@ -24,11 +23,12 @@ body{
   align-items: center;
   justify-content: center;
   justify-items: center;
+
   rigth{
     margin-top: 45px;
     display: flex;
-
   }
+
   rigth h2{
     text-align: center;
     font-size: 35px;
@@ -36,22 +36,23 @@ body{
     font-weight: 500;
     margin: 40px 0;
   }
+
   rigth content{
     display: flex;
     justify-content: stretch;
-
   }
+
   rigth content span{
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
   }
+
   left{
 
   }
   .left img{
     width: 30rem;
   }
-
 }
 
 .btn{
@@ -78,9 +79,6 @@ body{
 
 
 @media screen and (max-width: 1050px){
-
-
-
   .content{
     display: flex;
     justify-content: flex-start;
@@ -97,14 +95,12 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
   }
 
   .rigth{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
   }
 
   form{
@@ -136,15 +132,14 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
   }
 
   .rigth{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
   }
+
   .content{
     display: flex;
     justify-content: flex-start;
@@ -164,6 +159,4 @@ body{
   .wave{
     width: auto;
   }
-
-
 }

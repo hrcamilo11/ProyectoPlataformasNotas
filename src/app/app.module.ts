@@ -11,23 +11,29 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 
 //Componentes
-import {DocumentListComponent} from "./components/document-list/document-list.component";
 import {AppComponent} from "./app.component";
+
 
 
 
 @NgModule({
   declarations: [
+
   ],
   imports: [
     CommonModule,
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppComponent
+    AppComponent,
+
+
   ],
   providers:[
     CargarScriptsService
+  ],
+  bootstrap:[
+
   ]
 })
 export class AppModule { }

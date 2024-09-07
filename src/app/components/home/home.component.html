@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UPB Docs</title>
+</head>
+<body>
+<header class="header">
+  <div class="logo">UPB Docs</div>
+  <nav class="nav">
+    <a routerLink="/universidades">Universidades</a>
+    <a routerLink="/libros">Libros</a>
+    <a routerLink="/documentos">Documentos</a>
+  </nav>
+  <button class="logout"><a (click)="logout()">Logout</a></button>
+</header>
+<main class="main">
+  <section class="search-section">
+    <h1>Seamos más inteligentes juntos</h1>
+    <p>Encuentre notas de estudio mejor calificadas de estudiantes que toman los mismos cursos que usted.</p>
+    <div class="search-bar">
+      <input type="text" placeholder="  Busca cursos, libros o documentos">
+      <button>🔍</button>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="tabs">
+
+      <button class="tab-button" data-tab="universidades">Universidades</button>
+
+
+      <button class="tab-button" data-tab="documentos">Documentos</button>
+
+
+      <button class="tab-button" data-tab="examenes">Examenes</button>
+
+
+      <button class="tab-button" data-tab="libros">Libros</button>
+
+    </div>
+    <div class="content-div">
+      <div class="tab-content 1" id="universidades" ></div>
+      <div class="tab-content 2" id="documentos"    ></div>
+      <div class="tab-content 3" id="examenes"      ></div>
+      <div class="tab-content 4" id="libros"        ></div>
+    </div>
+  </section>
+
+</main>
+</body>
+
+</html>
