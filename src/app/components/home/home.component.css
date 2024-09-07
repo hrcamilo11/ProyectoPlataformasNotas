@@ -51,7 +51,7 @@ body {
 }
 
 .search-section {
-  padding: 10.5rem 1rem;
+  padding: 12.5rem 1rem;
   text-align: center;
 }
 
@@ -131,11 +131,11 @@ body {
 
   .tab-content.active {
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
     justify-content: space-between;
-
-
+    max-height: 1000px; /* Establece un valor máximo de 1000px para el contenido */
+    overflow-y: auto; /* Muestra una barra de desplazamiento vertical cuando el contenido supere las 10 filas */
 
   }
 
