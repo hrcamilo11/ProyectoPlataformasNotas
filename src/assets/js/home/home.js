@@ -43,23 +43,22 @@ function getApiUrl(tabId) {
     }
 }
 
-// Function to render data in the tab content
 function renderTabContent(tabContent, data) {
-    let html = '';
-    switch (tabContent.id) {
-        case 'universidades':
-            data.forEach((universidad) => {
-                html += `
+  let html = '';
+  switch (tabContent.id) {
+    case 'universidades':
+      data.slice(0, 6).forEach((universidad) => {
+        html += `
           <div class="item-card">
             <img src="https://via.placeholder.com/100x100?text=University" alt="University logo">
             <h3>${universidad.nombre}</h3>
           </div>
         `;
-            });
-            break;
-        case 'documentos':
-            data.forEach((documento) => {
-                html += `
+      });
+      break;
+    case 'documentos':
+      data.slice(0, 3).forEach((documento) => {
+        html += `
           <div class="item-card">
             <img src="https://via.placeholder.com/100x100?text=Document" alt="Document icon">
             <h3>${documento.titulo}</h3>
@@ -70,22 +69,22 @@ function renderTabContent(tabContent, data) {
             <p>Calificación promedio: ${documento.calificacion_promedio}</p>
           </div>
         `;
-            });
-            break;
-        case 'libros':
-            data.forEach((libro) => {
-                html += `
+      });
+      break;
+    case 'libros':
+      data.slice(0, 3).forEach((libro) => {
+        html += `
           <div class="item-card">
             <img src="https://via.placeholder.com/100x100?text=Book" alt="Book cover">
             <h3>${libro.nombre}</h3>
             <p>Autor: ${libro.autor}</p>
           </div>
         `;
-            });
-            break;
-        case 'examenes':
-            data.forEach((examen) => {
-                html += `
+      });
+      break;
+    case 'examenes':
+      data.slice(0, 3).forEach((examen) => {
+        html += `
           <div class="item-card">
             <img src="https://via.placeholder.com/100x100?text=Exam" alt="Exam icon">
             <h3>${examen.tema}</h3>
@@ -94,8 +93,8 @@ function renderTabContent(tabContent, data) {
             <p>Nota: ${examen.nota}</p>
           </div>
         `;
-            });
-            break;
-    }
-    tabContent.innerHTML = html;
+      });
+      break;
+  }
+  tabContent.innerHTML = html;
 }

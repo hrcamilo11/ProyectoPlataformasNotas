@@ -49,7 +49,8 @@ body {
     padding: 0 1rem;
 
     .search-section {
-      padding: 12.5rem 1rem;
+      margin: auto auto;
+      padding: 12.5rem ;
       text-align: center;
 
       .h1 {
@@ -83,21 +84,25 @@ body {
     }
 
     .content-section {
+
+      width: 100%;
+      margin-left: 10%;
+      margin-right: 10%;
       padding-bottom: 10rem;
-      margin: 0 auto;
-      background-color: rgba(224, 255, 255, 0.12);
+      background-color: rgba(224, 255, 255, 0.01);
       border-radius: 24px;
       overflow: hidden;
       max-width: calc(80% - 20px);
       height: 600px;
       justify-content: stretch;
+      box-sizing: border-box;
+      box-shadow: 0.2px 2px 4px rgba(0, 0, 0, 0.3);
 
       .tabs {
         display: flex;
         justify-content: center;
         background-color: #f0f0f0;
         margin-bottom: 1rem;
-
       }
 
       .tab-button {
@@ -125,9 +130,13 @@ body {
       }
 
       .content-div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        margin: 3rem 3rem;
+        word-break: break-word;
+
+        display: grid;
+        max-width: 100%;
+
+
 
         .tab-content{
           display: none;
@@ -135,11 +144,12 @@ body {
 
         .tab-content.active {
           display: grid;
+          margin: 0;
           grid-template-columns: 1fr 1fr 1fr;
           gap: 3rem;
           justify-content: space-between;
-          max-height: 1000px; /* Establece un valor máximo de 1000px para el contenido */
-          overflow-y: auto; /* Muestra una barra de desplazamiento vertical cuando el contenido supere las 10 filas */
+          max-height: 1000px;
+
 
         }
 
