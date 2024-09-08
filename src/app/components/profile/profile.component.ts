@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import {CargarScriptsService} from "../../services/cargar-scripts.service";
-import {Router} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
