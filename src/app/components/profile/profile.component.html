@@ -1,143 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodingDung | Plantilla de perfil</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+  <title>Configuración de Perfil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+</head>
 <body>
-<main>
-  <div class="div-general container light-style flex-grow-1 container-p-y">
-    <h4 class="font-weight-bold py-3 mb-4">
-      Configuración de cuenta
-    </h4>
-    <div class="div-segundo card overflow-hidden">
-      <div class="row no-gutters row-bordered row-border-light">
-        <div class="Selector col-md-3 pt-0">
-          <div class="list-group list-group-flush account-settings-links">
-            <a class="list-group-item list-group-item-action active" data-toggle="list"
-               href="#account-general">General</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list"
-               href="#account-change-password">Cambiar contraseña</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list"
-               href="#account-info">Información</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list"
-               href="#account-social-links">Enlaces sociales</a>
-          </div>
-        </div>
-        <div class="col-md-9">
-          <div class="tab-content">
-            <div class="tab-pane fade active show" id="account-general">
-              <div class="card-body media align-items-center">
-                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt
-                     class="d-block ui-w-80">
-                <div class="media-body ml-4">
-                  <label class="boton-foto btn btn-outline-light">
-                    Subir nueva foto
-                    <input type="file" class="account-settings-fileinput">
-                  </label> &nbsp;
-                  <button type="button" class="boton-restablecer btn btn-light md-btn-flat">Restablecer</button>
-                  <div class="text-light small mt-0">Permitido JPG, GIF o PNG. Tamaño máximo de 800K</div>
-                </div>
-              </div>
-              <hr class="border-light m-0">
-              <div class="card-body">
-                <div class="form-group">
-                  <label class="form-label">Nombre de usuario</label>
-                  <input type="text" class="form-control mb-1" value=>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Nombre</label>
-                  <input type="text" class="form-control" value=>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Correo electrónico</label>
-                  <input type="text" class="form-control mb-1" value=>
-                  <div class="alert alert-warning mt-3">
-                    Tu correo electrónico no está confirmado. Por favor, revisa tu bandeja de entrada.<br>
-                    <a href="javascript:void(0)">Reenviar confirmación</a>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Universidad</label>
-                  <input type="text" class="form-control" value>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="account-change-password">
-              <div class="card-body pb-2">
-                <div class="form-group">
-                  <label class="form-label">Contraseña actual</label>
-                  <input type="password" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Nueva contraseña</label>
-                  <input type="password" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Repetir nueva contraseña</label>
-                  <input type="password" class="form-control">
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="account-info">
-              <div class="card-body pb-2">
-                <div class="form-group">
-                  <label class="form-label">Biografía</label>
-                  <textarea class="form-control"
-                            rows="5"></textarea>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Fecha de nacimiento</label>
-                  <input type="text" class="form-control" value="">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Ciudad</label>
-                  <select class="custom-select">
-                    <option>Medellín</option>
-                    <option selected>Bogotá</option>
-                    <option>Cali</option>
-                    <option>Manizales</option>
-                  </select>
-                </div>
-              </div>
-              <hr class="border-light m-0">
-              <div class="card-body pb-2">
-                <h6 class="mb-4">Contactos</h6>
-                <div class="form-group">
-                  <label class="form-label">Teléfono</label>
-                  <input type="text" class="form-control" value>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="account-social-links">
-              <div class="card-body pb-2">
-                <div class="form-group">
-                  <label class="form-label">Github</label>
-                  <input type="text" class="form-control" value>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">LinkedIn</label>
-                  <input type="text" class="form-control" value>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="container">
+  <div class="sidebar">
+    <div class="profile-summary">
+      <img src="/assets/images/img/profile.jpg" alt="Foto de perfil" class="profile-pic">
+      <h3>Nombre Usuario</h3>
+    </div>
+    <nav>
+      <button onclick="showSection('general')"><i class="fas fa-user"></i> General</button>
+      <button onclick="showSection('password')"><i class="fas fa-lock"></i> Contraseña</button>
+      <button onclick="showSection('info')"><i class="fas fa-info-circle"></i> Información</button>
+      <button onclick="showSection('social')"><i class="fas fa-share-alt"></i> Enlaces sociales</button>
+    </nav>
+  </div>
+  <div class="content">
+    <section id="general" class="active">
+      <h2>Configuración General</h2>
+      <div class="profile-pic-upload">
+        <img src="/assets/images/img/profile.jpg" alt="Foto de perfil grande" class="profile-pic-large">
+        <div>
+          <button class="btn btn-primary"><i class="fas fa-upload"></i> Subir nueva foto</button>
+          <button class="btn btn-secondary"><i class="fas fa-undo"></i> Restablecer</button>
+          <p class="text-muted">Permitido JPG, GIF o PNG. Tamaño máximo de 800K</p>
         </div>
       </div>
-    </div>
-    <div class="text-right mt-3">
-      <button type="button" class="btn btn-primary">Guardar cambios</button>&nbsp;
-      <button type="button" class="btn btn-default">Cancelar</button>
-    </div>
+      <form id="general-form">
+        <div class="form-group">
+          <label for="username">Nombre de usuario</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+          <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i> Tu correo electrónico no está confirmado. Por favor, revisa tu bandeja de entrada.
+            <a href="#" class="resend-link">Reenviar confirmación</a>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="university">Universidad</label>
+          <input type="text" id="university" name="university">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Guardar cambios</button>
+          <button type="button" class="btn btn-danger"><i class="fas fa-times"></i> Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="password" class="hidden">
+      <h2>Cambiar Contraseña</h2>
+      <form id="password-form">
+        <div class="form-group">
+          <label for="current-password">Contraseña actual</label>
+          <input type="password" id="current-password" name="current-password" required>
+        </div>
+        <div class="form-group">
+          <label for="new-password">Nueva contraseña</label>
+          <input type="password" id="new-password" name="new-password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirmar nueva contraseña</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Guardar cambios</button>
+          <button type="button" class="btn btn-danger"><i class="fas fa-times"></i> Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="info" class="hidden">
+      <h2>Información Adicional</h2>
+      <form id="info-form">
+        <div class="form-group">
+          <label for="bio">Biografía</label>
+          <textarea id="bio" name="bio" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="location">Ubicación</label>
+          <input type="text" id="location" name="location">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Guardar cambios</button>
+          <button type="button" class="btn btn-danger"><i class="fas fa-times"></i> Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="social" class="hidden">
+      <h2>Enlaces Sociales</h2>
+      <form id="social-form">
+        <div class="form-group">
+          <label for="twitter"><i class="fab fa-twitter"></i> Twitter</label>
+          <input type="text" id="twitter" name="twitter">
+        </div>
+        <div class="form-group">
+          <label for="facebook"><i class="fab fa-facebook"></i> Facebook</label>
+          <input type="text" id="facebook" name="facebook">
+        </div>
+        <div class="form-group">
+          <label for="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</label>
+          <input type="text" id="linkedin" name="linkedin">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Guardar cambios</button>
+          <button type="button" class="btn btn-danger"><i class="fas fa-times"></i> Cancelar</button>
+        </div>
+      </form>
+    </section>
   </div>
-</main>
-
-<script NgSrc="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script NgSrc="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+</div>
 </body>
-
 </html>
