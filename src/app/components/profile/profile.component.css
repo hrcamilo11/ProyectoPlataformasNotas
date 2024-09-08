@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+
+}
+
+main{
+  background: #ffffff !important;
+
+  .div-general{
+
+
+    .div-segundo{
+      background: rgba(48, 63, 159, 0.8)  !important;
+      border-radius: 20px;;
+      border-color: rgba(48, 63, 159, 0.8)  !important;
+      border-width: 2px;
+      box-shadow: 2px 2px 8px #000000 !important;
+
+      .boton-foto{
+        box-shadow: 1px 1px 1px #000000 !important;
+      }
+
+      .boton-restablecer{
+        box-shadow: 1px 1px 1px #000000 !important;
+      }
+
+      .boton-restablecer:hover{
+        color: white;
+        background: rgba(48, 63, 159, 0.7) !important; ;
+      }
+    }
+
+    .Selector {
+      background: white ! important;
+    }
+
+
+
+  }
+
+
+}
+
+.ui-w-80 {
+  width: 80px !important;
+  height: auto;
+}
+
+.btn-default {
+  border-color: rgba(24, 28, 33, 0.1);
+  background: rgba(0, 0, 0, 0);
+  color: #4E5155;
+}
+
+label.btn {
+  margin-bottom: 0;
+}
+
+.btn-outline-primary {
+  border-color: #26B4FF;
+  background: transparent;
+  color: #26B4FF;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.card {
+  background-clip: padding-box;
+  box-shadow: 0 1px 4px rgba(24, 28, 33, 0.013);
+}
+
+.row-bordered {
+  overflow: hidden;
+}
+
+.account-settings-fileinput {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.account-settings-links .list-group-item.active {
+  font-weight: bold !important;
+  background: transparent !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+  padding: 0.85rem 1.5rem;
+  border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+  color: #4E5155 !important;
+}
