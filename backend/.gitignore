@@ -1,0 +1,41 @@
+# Entorno virtual
+venv/
+.env
+.venv/
+env/
+ENV/
+__pycache__/
+
+# Configuración de entorno
+*.env
+*.env.*
+
+# Archivos de VSCode
+.vscode/
+
+# Archivos de Python
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Archivos de caché y otros temporales
+*.log
+*.sqlite3
+*.db
+.DS_Store
+
+# Archivos de distribución
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Archivos de cobertura de tests
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+
+# Otros archivos opcionales
+*.swp
