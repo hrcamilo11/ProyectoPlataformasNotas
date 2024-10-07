@@ -1,7 +1,6 @@
-# Plataforma de Apuntes Universitarios
+# ProyectoPlataformasNotas
 
-## Descripción General
-Esta es una plataforma en línea dedicada a brindar acceso de apuntes universitarios de alta calidad. Los estudiantes pueden subir, descargar y colaborar en la mejora de apuntes en diversas materias. La plataforma cuenta con un sistema de búsqueda avanzada, revisiones de calidad y una comunidad que contrinuye a su crecimiento.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
 
 ## Objetivo General
 Proveer a los estudiantes universitarios de una herramienta eficaz y confiable para acceder a apuntes y recursos educativos, fomentando una comunidad colaborativa y asegurando la compensación justa para los creadores de contenido.
@@ -71,3 +70,4 @@ Proveer a los estudiantes universitarios de una herramienta eficaz y confiable p
 - **Seguridad:** Implementar medidas de seguridad robustas.
 - **Escalabilidad:** Asegurar que la plataforma sea escalable para adaptarse a futuras necesidades.
 
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

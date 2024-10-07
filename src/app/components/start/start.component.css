@@ -1,0 +1,162 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.wave{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+
+  rigth{
+    margin-top: 45px;
+    display: flex;
+  }
+
+  rigth h2{
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: 40px 0;
+  }
+
+  rigth content{
+    display: flex;
+    justify-content: stretch;
+  }
+
+  rigth content span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+  }
+
+  left{
+
+  }
+  .left img{
+    width: 30rem;
+  }
+}
+
+.btn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #303f9f, #2F9C91, #303f9f);
+  background-size: 200%;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.btn:hover{
+  background-position: right;
+}
+
+
+@media screen and (max-width: 1050px){
+  .content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 1000px){
+
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .rigth{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  form{
+    width: 290px;
+  }
+
+  .content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+  }
+
+  .content h2{
+    font-size: 2.4rem;
+    margin: 8px 0;
+  }
+
+  .left img{
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 900px){
+
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .rigth{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+  }
+
+  .container{
+    grid-template-columns: 1fr;
+  }
+
+  .left{
+    display: none;
+  }
+
+  .wave{
+    width: auto;
+  }
+}

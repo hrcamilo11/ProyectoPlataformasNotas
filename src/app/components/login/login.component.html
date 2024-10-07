@@ -1,0 +1,75 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Animated Login Design #02 | AsmrProg</title>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="signup-section">
+    <header>
+    <h3>
+      Signup
+    </h3>
+    </header>
+
+    <div class="social-buttons">
+      <button><i class='bx bxl-google'></i> Use Google</button>
+      <button><i class='bx bxl-apple'></i> Use Apple</button>
+    </div>
+
+    <div class="separator">
+      <div class="line"></div>
+      <p>Or</p>
+      <div class="line"></div>
+    </div>
+
+
+    <form class="singup-form" (submit)="onSignup(fullName.value, email.value, password.value)">
+      <input type="text" #fullName placeholder="Full name" required>
+      <input type="email" #email placeholder="Email address" required>
+      <input type="password" #password placeholder="Password" required>
+      <a routerLink="/recovery">Forget Password?</a>
+      <div class="btn-singup">
+        <button type="submit" class="btn">Signup</button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="login-section">
+    <header>
+      <h3>
+        Login
+      </h3>
+    </header>
+
+    <div class="social-buttons">
+      <button><i class='bx bxl-google'></i> Use Google</button>
+      <button><i class='bx bxl-apple'></i> Use Apple</button>
+    </div>
+
+    <div class="separator">
+      <div class="line"></div>
+      <p>Or</p>
+      <div class="line"></div>
+    </div>
+
+    <form class="login-form" (submit)="onLogin(email.value, password.value)">
+      <input type="email" #email placeholder="Email address" required>
+      <input type="password" #password placeholder="Password" required>
+      <a routerLink="/recovery">Forget Password?</a>
+      <div class="btn-login">
+        <button type="submit" class="btn">Login</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+</body>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración de Perfil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <div class="profile-summary">
+      <img src="/assets/images/img/profile.jpg" alt="Foto de perfil" class="profile-pic">
+      <h3>Nombre Usuario</h3>
+    </div>
+    <nav>
+      <button onclick="showSection('general')"><i class="fas fa-user"></i> General</button>
+      <button onclick="showSection('password')"><i class="fas fa-lock"></i> Contraseña</button>
+      <button onclick="showSection('info')"><i class="fas fa-info-circle"></i> Información</button>
+      <button onclick="showSection('social')"><i class="fas fa-share-alt"></i> Enlaces sociales</button>
+    </nav>
+  </div>
+  <div class="content">
+    <section id="general" class="active">
+      <h2>Configuración General</h2>
+      <div class="profile-pic-upload">
+        <img src="/assets/images/img/profile.jpg" alt="Foto de perfil grande" class="profile-pic-large">
+        <div>
+          <button class="btn btn-primary"><i class="fas fa-upload"></i> Subir nueva foto</button>
+          <button class="btn btn-secondary"><i class="fas fa-undo"></i> Restablecer</button>
+          <p class="text-muted">Permitido JPG, GIF o PNG. Tamaño máximo de 800K</p>
+        </div>
+      </div>
+      <form id="general-form">
+        <div class="form-group">
+          <label for="username">Nombre de usuario</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+          <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i> Tu correo electrónico no está confirmado. Por favor, revisa tu bandeja de entrada.
+            <a href="#" class="resend-link">Reenviar confirmación</a>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="university">Universidad</label>
+          <input type="text" id="university" name="university">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Guardar cambios</button>
+          <button type="button" class="btn btn-danger"><i class="fas fa-times"></i> <a routerLink="/Home">Cancelar</a></button>
+        </div>
+      </form>
+    </section>
+
+    <section id="password" class="hidden">
+      <h2>Cambiar Contraseña</h2>
+      <form id="password-form">
+        <div class="form-group">
+          <label for="current-password">Contraseña actual</label>
+          <input type="password" id="current-password" name="current-password" required>
+        </div>
+        <div class="form-group">
+          <label for="new-password">Nueva contraseña</label>
+          <input type="password" id="new-password" name="new-password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirmar nueva contraseña</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Guardar cambios</button>
+          <button type="button" class="btn btn-danger"><i class="fas fa-times"></i> <a routerLink="/Home">Cancelar</a></button>
+        </div>
+      </form>
+    </section>
+
+    <section id="info" class="hidden">
+      <h2>Información Adicional</h2>
+      <form id="info-form">
+        <div class="form-group">
+          <label for="bio">Biografía</label>
+          <textarea id="bio" name="bio" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="location">Ubicación</label>
+          <input type="text" id="location" name="location">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Guardar cambios</button>
+          <button type="button" class="btn btn-danger"><i class="fas fa-times"></i> <a routerLink="/Home">Cancelar</a></button>
+        </div>
+      </form>
+    </section>
+
+    <section id="social" class="hidden">
+      <h2>Enlaces Sociales</h2>
+      <form id="social-form">
+        <div class="form-group">
+          <label for="twitter"><i class="fab fa-twitter"></i> Twitter</label>
+          <input type="text" id="twitter" name="twitter">
+        </div>
+        <div class="form-group">
+          <label for="facebook"><i class="fab fa-facebook"></i> Facebook</label>
+          <input type="text" id="facebook" name="facebook">
+        </div>
+        <div class="form-group">
+          <label for="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</label>
+          <input type="text" id="linkedin" name="linkedin">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Guardar cambios</button>
+          <button type="button" class="btn btn-danger"><i class="fas fa-times"></i> <a routerLink="/Home">Cancelar</a></button>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
+</body>
+</html>
