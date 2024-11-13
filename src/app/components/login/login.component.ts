@@ -26,15 +26,22 @@ export class LoginComponent {
   passwordError: string | null = null;
 
   onLogin(email: string, password: string): void {
-    const storedUsers = JSON.parse(<string>localStorage.getItem('users')) || [];
-    const user = storedUsers.find((u: { email: string; password: string; }) => u.email === email && u.password === password);
+    // Enviar datos al backend para iniciar sesión
+    const loginData = { username: email, password: password };
+    console.log(loginData)
 
-    if (user) {
-      localStorage.setItem('loggedIn', 'true');
-      this.router.navigate(['/home']);
-    } else {
-      alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
-    }
+    this.http.post('http://localhost:8080/api/auth/login/', loginData)
+      .subscribe({
+        next: (response) => {
+          // Aquí puedes manejar la respuesta del backend, como almacenar el token
+          localStorage.setItem('loggedIn', 'true'); // O maneja el estado según la respuesta
+          this.router.navigate(['/home']);
+        },
+        error: (error) => {
+          console.error('Error al iniciar sesión:', error);
+          alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
+        }
+      });
   }
 
   onSignup(event: Event, fullName: string, email: string, password: string): void {

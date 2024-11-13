@@ -58,9 +58,9 @@
       <div class="line"></div>
     </div>
 
-    <form class="login-form" (submit)="onLogin(email.value, password.value)">
-      <input type="email" #email placeholder="Email address" required>
-      <input type="password" #password placeholder="Password" required>
+    <form class="login-form" (submit)="onLogin(username.value, password2.value)">
+      <input #username placeholder="Username" required>
+      <input type="password" #password2 placeholder="Password" required>
       <a routerLink="/recovery">Forget Password?</a>
       <div class="btn-login">
         <button type="submit" class="btn">Login</button>

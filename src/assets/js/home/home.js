@@ -31,7 +31,7 @@ tabButtons.forEach((button) => {
 function getApiUrl(tabId) {
     switch (tabId) {
         case 'universidades':
-            return 'https://retoolapi.dev/ZcmJpK/universidades';
+            return 'http://localhost:8080/api/universities';
         case 'documentos':
             return 'https://retoolapi.dev/T1JTJv/documentos';
         case 'examenes':
