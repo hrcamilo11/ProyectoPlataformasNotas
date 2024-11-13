@@ -27,7 +27,7 @@
     </div>
 
 
-    <form class="singup-form" (submit)="onSignup(fullName.value, email.value, password.value)">
+    <form class="singup-form" (submit)="onSignup($event, fullName.value, email.value, password.value)">
       <input type="text" #fullName placeholder="Full name" required>
       <input type="email" #email placeholder="Email address" required>
       <input type="password" #password placeholder="Password" required>
